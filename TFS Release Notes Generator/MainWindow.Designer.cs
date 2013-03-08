@@ -37,7 +37,7 @@
             this.labelCollection = new System.Windows.Forms.Label();
             this.comboBoxCollection = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.browserContent = new System.Windows.Forms.WebBrowser();
+            this.htmlPanelContent = new HtmlRenderer.HtmlPanel();
             this.panelControls.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -128,24 +128,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.browserContent);
+            this.panel1.Controls.Add(this.htmlPanelContent);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(863, 434);
             this.panel1.TabIndex = 2;
             // 
-            // browserContent
+            // htmlPanelContent
             // 
-            this.browserContent.AllowNavigation = false;
-            this.browserContent.AllowWebBrowserDrop = false;
-            this.browserContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browserContent.IsWebBrowserContextMenuEnabled = false;
-            this.browserContent.Location = new System.Drawing.Point(0, 0);
-            this.browserContent.MinimumSize = new System.Drawing.Size(20, 20);
-            this.browserContent.Name = "browserContent";
-            this.browserContent.Size = new System.Drawing.Size(863, 434);
-            this.browserContent.TabIndex = 0;
+            this.htmlPanelContent.AutoScroll = true;
+            this.htmlPanelContent.AutoScrollMinSize = new System.Drawing.Size(863, 0);
+            this.htmlPanelContent.BackColor = System.Drawing.SystemColors.Window;
+            this.htmlPanelContent.BaseStylesheet = null;
+            this.htmlPanelContent.Bridge = null;
+            this.htmlPanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlPanelContent.Location = new System.Drawing.Point(0, 0);
+            this.htmlPanelContent.Name = "htmlPanelContent";
+            this.htmlPanelContent.Size = new System.Drawing.Size(863, 434);
+            this.htmlPanelContent.TabIndex = 0;
+            this.htmlPanelContent.Text = " ";
             // 
             // MainWindow
             // 
@@ -176,7 +178,7 @@
         private System.Windows.Forms.Label labelIteration;
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.WebBrowser browserContent;
+        private HtmlRenderer.HtmlPanel htmlPanelContent;
     }
 }
 
