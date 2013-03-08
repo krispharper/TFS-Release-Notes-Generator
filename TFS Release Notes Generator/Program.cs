@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TFS_Release_Notes_Generator
+namespace TfsReleaseNotesGenerator
 {
     static class Program
     {
@@ -16,7 +17,7 @@ namespace TFS_Release_Notes_Generator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainWindow());
         }
     }
 }
