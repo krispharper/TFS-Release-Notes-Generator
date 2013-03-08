@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.panelControls = new System.Windows.Forms.Panel();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.comboBoxIteration = new System.Windows.Forms.ComboBox();
@@ -157,6 +158,7 @@
             this.ClientSize = new System.Drawing.Size(863, 497);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelControls);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(879, 163);
             this.Name = "MainWindow";
             this.Text = "TFS Release Notes Generator";
