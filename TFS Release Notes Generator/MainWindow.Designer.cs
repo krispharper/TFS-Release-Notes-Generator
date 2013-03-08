@@ -160,6 +160,8 @@
             this.MinimumSize = new System.Drawing.Size(879, 163);
             this.Name = "MainWindow";
             this.Text = "TFS Release Notes Generator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.panelControls.ResumeLayout(false);
             this.panelControls.PerformLayout();
             this.panel1.ResumeLayout(false);

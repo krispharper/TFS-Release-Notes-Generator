@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Microsoft.TeamFoundation.Client;
 using Microsoft.TeamFoundation.WorkItemTracking.Client;
+using TfsReleaseNotesGenerator.Properties;
 
 namespace TfsReleaseNotesGenerator
 {
@@ -88,6 +89,27 @@ namespace TfsReleaseNotesGenerator
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            if (Settings.Default.WindowLocation != null)
+                this.Location = Settings.Default.WindowLocation;
+
+            if (Settings.Default.WindowSize != null)
+                this.Size = Settings.Default.WindowSize;
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.WindowLocation = this.Location;
+
+            if (this.WindowState == FormWindowState.Normal)
+                Settings.Default.WindowSize = this.Size;
+            else
+                Settings.Default.WindowSize = this.RestoreBounds.Size;
+
+            Settings.Default.Save();
         }
     }
 }
