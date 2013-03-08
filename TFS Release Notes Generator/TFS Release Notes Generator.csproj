@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>VSLogo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlRenderer">
@@ -87,15 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VSLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="VSLogo.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\VSLogo.ico" />
